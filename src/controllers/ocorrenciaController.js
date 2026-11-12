@@ -1,6 +1,6 @@
 const db = require('../config/db');
 
-// LISTAR
+
 const listar = async (req, res) => {
     try {
         const [rows] = await db.query('SELECT * FROM ocorrencia');
@@ -10,7 +10,7 @@ const listar = async (req, res) => {
     }
 };
 
-// CADASTRAR
+
 const cadastrar = async (req, res) => {
     try {
         const { usuarioId, local, tipoResiduo, nivelRisco, data, status } = req.body;
@@ -25,7 +25,7 @@ const cadastrar = async (req, res) => {
     }
 };
 
-// ATUALIZAR
+
 const atualizar = async (req, res) => {
     try {
         const { id } = req.params;
@@ -43,7 +43,7 @@ const atualizar = async (req, res) => {
     }
 };
 
-// EXCLUIR
+
 const excluir = async (req, res) => {
     try {
         const { id } = req.params;
