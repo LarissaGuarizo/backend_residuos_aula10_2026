@@ -43,3 +43,14 @@ Certifique-se de ter instalado em sua máquina:
    node server.js
    ```
 5. Acesse a interface web no navegador em `http://localhost:3000`.
+
+## Prints
+
+- Listar
+![listar.png](./listar.png)
+
+- Cadastrar
+![cadastrar.png](./cadastrar.png)
+
+- Excluir
+![excluir.png](./excluir.png)
