@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Resíduos</title>
+</head>
+<body>
+    <h1>Registros de resíduos</h1>
+
+    <form id="form-ocorrencia">
+        <input type="number" id="usuarioId" value="1" placeholder="ID Usuário" required>      
+        <input type="text" id="local" placeholder="Local da ocorrência" required>
+        <select id="nivelRisco">
+            <option value="Baixo">Baixo</option>
+            <option value="Medio" selected>Médio</option>
+            <option value="Alto">Alto</option>
+        </select>
+        <input type="text" id="tipoResiduo" placeholder="Tipo do Resíduo" required>
+        <input type="date" id="data" required>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <br>
+
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuário</th>
+                <th>Local</th>
+                <th>Tipo de Resíduo</th>
+                <th>Nível de Risco</th>
+                <th>Data</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-ocorrencias"></tbody>    
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

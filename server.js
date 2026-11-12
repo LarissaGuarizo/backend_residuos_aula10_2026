@@ -1,0 +1,20 @@
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+
+const app = express();
+const PORT = 3000;
+
+app.use(cors());
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+const ocorrenciaRoutes = require('./src/routes/ocorrenciaRoutes');
+app.use('/ocorrencias', ocorrenciaRoutes);
+
+
+
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
